@@ -4,12 +4,14 @@ body {
   box-sizing: border-box;
   background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .score-container {
   margin-top: 50px;
   border: 2px solid hsl(217, 16%, 45%);
-  width: 750px;
+  max-width: 750px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -45,45 +47,119 @@ body {
 
 .bg-pentagon {
   background-image: url("./images/bg-pentagon.svg");
-  margin-top: 50px;
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
   width: 400px;
   height: 400px;
+  margin-top: 120px;
+  display: none;
 }
 
 .option-container {
   background-color: #fff;
-  width: 110px;
-  height: 110px;
+  width: 100px;
+  height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   border-radius: 100%;
+  position: absolute;
 }
 
 .scissors {
   border: 20px solid hsl(39, 89%, 49%);
+  margin-left: 120px;
+  margin-top: -60px;
 }
 
 .spock {
   border: 20px solid hsl(189, 59%, 53%);
+  margin-top: 70px;
+  margin-left: -60px;
 }
 
 .paper {
   border: 20px solid hsl(230, 89%, 62%);
+  margin-top: 70px;
+  margin-left: 310px;
 }
 
 .lizard {
   border: 20px solid hsl(261, 73%, 60%);
+  margin-top: 290px;
+  margin-left: 20px;
 }
 
 .rock {
   border: 20px solid hsl(349, 71%, 52%);
+  margin-top: 290px;
+  margin-left: 240px;
 }
 
 .option-image {
+}
+
+/* after selection css */
+.selected-options-container {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 70px;
+  /* display: none; */
+}
+
+.choice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.choice-text {
+  font-size: 21px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.user-option-container {
+  background-color: #fff;
+  width: 230px;
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  margin-top: 40px;
+}
+
+.user-scissors {
+  border: 33px solid hsl(39, 89%, 49%);
+}
+
+.user-spock {
+  border: 33px solid hsl(189, 59%, 53%);
+}
+
+.user-paper {
+  border: 33px solid hsl(230, 89%, 62%);
+}
+
+.user-lizard {
+  border: 33px solid hsl(261, 73%, 60%);
+}
+
+.user-rock {
+  border: 33px solid hsl(349, 71%, 52%);
+}
+
+.user-option-image {
+  width: 90px;
 }
