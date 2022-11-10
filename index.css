@@ -6,6 +6,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   overflow: hidden;
+  font-family: "Quicksand", sans-serif;
 }
 
 .score-container {
@@ -37,11 +38,12 @@ body {
   font-size: 16px;
   color: hsl(229, 64%, 46%);
   text-transform: uppercase;
+  font-weight: 600;
 }
 
 .score {
   font-size: 50px;
-  font-weight: bold;
+  font-weight: 700;
   color: hsl(229, 25%, 31%);
 }
 
@@ -104,13 +106,15 @@ body {
 
 /* after selection css */
 .selected-options-container {
-  max-width: 700px;
+  width: 950px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   margin-top: 70px;
+
   /* display: none; */
 }
 
@@ -126,6 +130,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-weight: 700;
 }
 
 .user-option-container {
@@ -162,4 +167,31 @@ body {
 
 .user-option-image {
   width: 90px;
+}
+
+/* game result */
+.game-result-container {
+  /* display: none; */
+}
+
+.game-result-text {
+  font-size: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.btn-container {
+  background-color: #fff;
+  width: 220px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-top: 18px;
+}
+
+.btn-text {
+  color: hsl(229, 25%, 31%);
+  font-size: 20px;
+  text-transform: uppercase;
 }
