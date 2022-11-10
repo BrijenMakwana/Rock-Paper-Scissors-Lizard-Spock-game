@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" async defer></script>
   </head>
   <body>
     <!-- score conatiner -->
@@ -20,13 +21,13 @@
       <!-- score card -->
       <div class="score-card">
         <span class="score-heading">score</span>
-        <span class="score">12</span>
+        <span id="score">0</span>
       </div>
     </div>
 
     <!-- game options -->
-    <div class="bg-pentagon">
-      <div class="option-container scissors">
+    <div id="bg-pentagon">
+      <div class="option-container" id="scissors">
         <img
           src="./images/icon-scissors.svg"
           class="option-image"
@@ -34,40 +35,41 @@
         />
       </div>
 
-      <div class="option-container spock">
+      <div class="option-container" id="spock">
         <img src="./images/icon-spock.svg" class="option-image" alt="spock" />
       </div>
 
-      <div class="option-container paper">
+      <div class="option-container" id="paper">
         <img src="./images/icon-paper.svg" class="option-image" alt="paper" />
       </div>
 
-      <div class="option-container lizard">
+      <div class="option-container" id="lizard">
         <img src="./images/icon-lizard.svg" class="option-image" alt="lizard" />
       </div>
 
-      <div class="option-container rock">
+      <div class="option-container" id="rock">
         <img src="./images/icon-rock.svg" class="option-image" alt="rock" />
       </div>
     </div>
 
     <!-- option selected by user -->
-    <div class="selected-options-container">
+    <div id="selected-options-container">
       <!-- user choice -->
       <div class="choice-container">
         <h2 class="choice-text">you picked</h2>
-        <div class="user-option-container user-spock">
+        <div class="user-option-container" id="user-choice">
           <img
             src="./images/icon-spock.svg"
             class="user-option-image"
             alt="spock"
+            id="user-choice-image"
           />
         </div>
       </div>
 
       <!-- game result -->
       <div class="game-result-container">
-        <span class="game-result-text">you lose</span>
+        <span id="game-result-text">you lose</span>
         <div class="btn-container">
           <span class="btn-text">play again</span>
         </div>
@@ -76,11 +78,12 @@
       <!-- the house choice -->
       <div class="choice-container">
         <h2 class="choice-text">the house picked</h2>
-        <div class="user-option-container user-lizard">
+        <div class="user-option-container" id="house-choice">
           <img
             src="./images/icon-lizard.svg"
             class="user-option-image"
             alt="spock"
+            id="house-choice-image"
           />
         </div>
       </div>
