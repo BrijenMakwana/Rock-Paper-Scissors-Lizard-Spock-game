@@ -56,7 +56,6 @@ body {
   width: 400px;
   height: 400px;
   margin-top: 120px;
-  /* display: none; */
 }
 
 .option-container {
@@ -172,6 +171,10 @@ body {
 /* game result */
 .game-result-container {
   /* display: none; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #game-result-text {
@@ -188,6 +191,7 @@ body {
   text-align: center;
   border-radius: 5px;
   margin-top: 18px;
+  cursor: pointer;
 }
 
 .btn-text {
