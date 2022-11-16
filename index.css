@@ -4,7 +4,8 @@ body {
   box-sizing: border-box;
   background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   background-repeat: no-repeat;
-  height: 100vh;
+  min-height: 100vh;
+  /* width: 100vw; */
   overflow: hidden;
   font-family: "Quicksand", sans-serif;
 }
@@ -68,7 +69,11 @@ body {
   align-items: center;
   border-radius: 100%;
   position: absolute;
+}
+
+.option-container:hover {
   cursor: pointer;
+  box-shadow: 0 0 20px #fff;
 }
 
 #scissors {
@@ -144,6 +149,28 @@ body {
   margin-top: 40px;
 }
 
+.winner::before {
+  content: "";
+  position: absolute;
+  width: 2000px;
+  height: 2000px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: -1;
+  animation: ripple 1.5s ease-out infinite;
+}
+
+@keyframes ripple {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+}
+
 .user-scissors {
   border: 33px solid hsl(39, 89%, 49%);
 }
@@ -169,9 +196,8 @@ body {
 }
 
 /* game result */
-.game-result-container {
-  /* display: none; */
-  display: flex;
+#game-result-container {
+  display: none;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -184,18 +210,211 @@ body {
   color: #fff;
 }
 
-.btn-container {
+#play-again-btn {
   background-color: #fff;
   width: 220px;
   padding: 10px;
   text-align: center;
   border-radius: 5px;
   margin-top: 18px;
+}
+
+#play-again-btn:hover {
   cursor: pointer;
+  box-shadow: 0 0 10px #fff;
 }
 
 .btn-text {
   color: hsl(229, 25%, 31%);
   font-size: 20px;
   text-transform: uppercase;
+  font-weight: 600;
+}
+
+#rule-container {
+  border: 2px solid #fff;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px 40px;
+  margin-left: auto;
+  margin-top: 70px;
+  margin-right: 40px;
+}
+
+#rule-container:hover {
+  cursor: pointer;
+}
+
+.rule-text {
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+#overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.rules-image-container {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 170px;
+  width: fit-content;
+}
+
+.rules-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.rules-heading {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: bold;
+  color: hsl(229, 25%, 31%);
+  margin: 0;
+  flex: 1;
+}
+
+#close-rules:hover {
+  cursor: pointer;
+}
+
+.rules-image {
+  margin-top: 10px;
+}
+
+/* mobile css */
+
+@media screen and (max-width: 400px) {
+  .score-container {
+    width: 270px;
+    padding: 20px;
+  }
+  .logo {
+    width: 80px;
+  }
+  .score-card {
+    background-color: #fff;
+    width: 100px;
+    height: 100px;
+  }
+
+  #bg-pentagon {
+    width: 300px;
+    height: 300px;
+    margin-top: 120px;
+  }
+
+  .option-container {
+    width: 70px;
+    height: 70px;
+  }
+
+  .option-image {
+    width: 35px;
+  }
+
+  #scissors {
+    border: 10px solid hsl(39, 89%, 49%);
+    margin-left: 105px;
+    margin-top: -40px;
+  }
+
+  #spock {
+    border: 10px solid hsl(189, 59%, 53%);
+    margin-top: 70px;
+    margin-left: -30px;
+  }
+
+  #paper {
+    border: 10px solid hsl(230, 89%, 62%);
+    margin-top: 70px;
+    margin-left: 240px;
+  }
+
+  #lizard {
+    border: 10px solid hsl(261, 73%, 60%);
+    margin-top: 230px;
+    margin-left: 20px;
+  }
+
+  #rock {
+    border: 10px solid hsl(349, 71%, 52%);
+    margin-top: 230px;
+    margin-left: 190px;
+  }
+
+  /* after selection css */
+  #selected-options-container {
+    width: 350px;
+    flex-wrap: wrap;
+  }
+
+  .choice-container {
+    align-items: center;
+    order: 1;
+  }
+
+  .choice-text {
+    font-size: 15px;
+    order: 2;
+  }
+
+  .user-option-container {
+    width: 90px;
+    height: 90px;
+    order: 1;
+  }
+
+  .winner::before {
+    height: 1000px;
+    width: 1000px;
+  }
+
+  .user-scissors {
+    border: 15px solid hsl(39, 89%, 49%);
+  }
+
+  .user-spock {
+    border: 15px solid hsl(189, 59%, 53%);
+  }
+
+  .user-paper {
+    border: 15px solid hsl(230, 89%, 62%);
+  }
+
+  .user-lizard {
+    border: 15px solid hsl(261, 73%, 60%);
+  }
+
+  .user-rock {
+    border: 15px solid hsl(349, 71%, 52%);
+  }
+
+  .user-option-image {
+    width: 40px;
+  }
+
+  /* game result */
+  #game-result-container {
+    margin-top: 60px;
+    order: 2;
+  }
+
+  .rule-container {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
