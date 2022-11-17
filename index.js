@@ -15,7 +15,7 @@ const game_result_container = document.getElementById("game-result-container");
 const game_result_text = document.getElementById("game-result-text");
 const play_again_btn = document.getElementById("play-again-btn");
 
-const rule_container_btn = document.getElementById("rule-container");
+const rule_container_btn = document.getElementById("rule-container-btn");
 const overlay_container = document.getElementById("overlay-container");
 const close_rules = document.getElementById("close-rules");
 
@@ -53,7 +53,7 @@ const houseMove = () => {
 
   setTimeout(() => {
     getResult();
-  }, 1500);
+  }, 1000);
 };
 
 const userWinnerEffect = () => {

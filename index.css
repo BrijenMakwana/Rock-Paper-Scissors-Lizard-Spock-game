@@ -230,7 +230,7 @@ body {
   font-weight: 600;
 }
 
-#rule-container {
+#rule-container-btn {
   border: 2px solid #fff;
   border-radius: 10px;
   width: fit-content;
@@ -240,11 +240,11 @@ body {
   bottom: 50px;
 }
 
-#rule-container:hover {
+#rule-container-btn:hover {
   cursor: pointer;
 }
 
-.rule-text {
+.rule-btn-text {
   font-size: 18px;
   color: #fff;
   text-transform: uppercase;
@@ -412,19 +412,9 @@ body {
     order: 2;
   }
 
-  #rule-container {
+  #rule-container-btn {
     right: 30%;
     bottom: 50px;
-  }
-
-  #overlay-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: none;
   }
 
   .rules-image {
