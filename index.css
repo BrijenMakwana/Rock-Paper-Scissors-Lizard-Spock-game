@@ -105,9 +105,6 @@ body {
   margin-left: 240px;
 }
 
-.option-image {
-}
-
 /* after selection css */
 #selected-options-container {
   width: 950px;
@@ -300,20 +297,29 @@ body {
   .score-container {
     width: 270px;
     padding: 20px;
+    margin-top: 20px;
   }
   .logo {
-    width: 80px;
+    width: 60px;
   }
   .score-card {
     background-color: #fff;
     width: 100px;
-    height: 100px;
+    height: 80px;
+  }
+
+  .score-heading {
+    font-size: 15px;
+  }
+
+  #score {
+    font-size: 40px;
   }
 
   #bg-pentagon {
     width: 300px;
     height: 300px;
-    margin-top: 120px;
+    margin-top: 70px;
   }
 
   .option-container {
@@ -408,13 +414,13 @@ body {
 
   /* game result */
   #game-result-container {
-    margin-top: 60px;
+    margin-top: 25px;
     order: 2;
   }
 
   #rule-container-btn {
     right: 30%;
-    bottom: 50px;
+    bottom: 20px;
   }
 
   .rules-image {
