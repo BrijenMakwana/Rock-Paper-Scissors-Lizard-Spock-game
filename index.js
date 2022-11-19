@@ -83,7 +83,7 @@ const getResult = () => {
         }
         break;
       case "paper":
-        if (houseChoice === "rock" || houseChoice === "Spock") {
+        if (houseChoice === "rock" || houseChoice === "spock") {
           userWinnerEffect();
         } else {
           houseWinnerEffect();
